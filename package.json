@@ -1,0 +1,56 @@
+{
+  "name": "ascii-comment",
+  "displayName": "Ascii Comment",
+  "description": "Convert any comment to ASCII characters only",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Formatters",
+    "Other"
+  ],
+  "keywords": ["ascii", "comment", "format", "convert", "special"],
+  "icon": "images/logo.png",
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ascii-comment.convertSelection",
+        "title": "Ascii Comment: Convert Selection",
+        "when": "editorHasSelection",
+        "key": "ctrl+f2"
+      },
+      {
+        "command": "ascii-comment.convertComments",
+        "title": "Ascii Comment: Convert Comments",
+        "key": "ctrl+f3"
+      },
+      {
+        "command": "ascii-comment.convertAll",
+        "title": "Ascii Comment: Convert All",
+        "key": "ctrl+f4"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.87.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.6",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}
