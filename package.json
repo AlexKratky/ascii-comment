@@ -3,6 +3,7 @@
   "displayName": "Ascii Comment",
   "description": "Convert any comment to ASCII characters only",
   "version": "1.0.0",
+  "publisher": "AlexKratky",
   "engines": {
     "vscode": "^1.87.0"
   },
